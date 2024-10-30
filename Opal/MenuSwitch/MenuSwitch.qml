@@ -100,6 +100,12 @@ S.MenuItem {
         height: S.Theme.itemSizeSmall
         width: S.Theme.iconSizeMedium + S.Theme.paddingSmall
         anchors.verticalCenter: parent.verticalCenter
+
+        onClicked: {
+            if (!!mouse && !automaticCheck) {
+                root.clicked()
+            }
+        }
     }
 
     TextMetrics {
